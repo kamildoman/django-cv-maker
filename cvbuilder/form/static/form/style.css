@@ -3,8 +3,6 @@ body {
 }
 
 
-
-
 h1 {
     text-align: center;
     font-size: 60px;
@@ -22,13 +20,18 @@ h3 {
 
 
 .firsthalf {
-    width: 500px;
+    width: 570px;
+    overflow:hidden;
 }
 
 .secondhalf {
     vertical-align: top;
-    width: 500px;
-    padding-left: 90px;
+    width: 400px;
+    padding-left: 100px;
+    overflow:hidden;
+    
+
+    
 }
 
 .skills {
@@ -46,6 +49,7 @@ p {
     width: 100%;
     font-weight: bolder;
 }
+
 
 
 .inputclass {
