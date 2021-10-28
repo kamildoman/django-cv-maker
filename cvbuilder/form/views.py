@@ -19,7 +19,7 @@ def index(request):
             a.save()
         return render(request, 'form/result.html', names)
                 
-        #return render_to_pdf('form/.html', names)
+        #return render_to_pdf('form/result.html', names)
 
     form = CVForm()
     context = {"form": form}
