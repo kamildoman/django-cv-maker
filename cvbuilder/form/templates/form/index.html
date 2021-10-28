@@ -1,0 +1,18 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'form/style.css' %}">
+<body>
+    
+    <img src="{{ 'images/logo.png' }}" alt="logo">
+    <form method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {% for item in form %}
+        <p>{{item.label}}: </p>
+        {{item}}
+
+        {% endfor %}
+        <br><br><br>
+        <hr>
+        <br>
+        <button type="submit" class="myButton">Apply</button>
+    </form>
+</body>

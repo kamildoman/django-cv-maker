@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'form/style.css' %}">
+<style>
+    body {
+      background-image: url("{% static 'form/background.jpg' %}");
+    }
+</style>
+<body>
+    <table>
+        <tr>           
+            <th class = "firsthalf">  
+                <img src="{{ names.picture.url }}" alt="picture"> 
+                <h1>{{names.name}} {{names.surname}} </h1>         
+                <h2>Date of birth: </h2>
+                <h3>{{ names.date_of_bith }}</h3>
+                <h2>Contact information:</h2>
+                <h3>Address: {{names.address}}</h3>
+                <h3>Phone: {{names.phone}}</h3>
+                <h3>Email: {{names.email}}</h3>
+                <h2>Languages:</h2>
+                <h3>{{names.language1}}</h3>
+                {% if names.language2 %}
+                <h3>{{names.language2}}</h3>
+                {% endif %}
+                {% if names.language3 %}
+                <h3>{{names.language3}}</h3>
+                {% endif %}
+            </th>
+            <th class = "secondhalf">
+                <h2>About me:</h2>
+                <p>{{names.about}}</p>
+                <h2>Skills:</h2>
+                <h3>- {{names.skill1}}</h3>
+                <h3>- {{names.skill2}}</h3>
+                {% if names.skill3 %}
+                <h3>- {{names.skill3}}</h3>
+                {% endif %}
+                {% if names.skill4 %}
+                <h3>- {{names.skill4}}</h3>
+                {% endif %}
+                {% if names.skill5 %}
+                <h3>- {{names.skill5}}</h3>
+                {% endif %}
+                {% if names.skill6 %}
+                <h3>- {{names.skill6}}</h3>
+                {% endif %}
+                <h2>Experience:</h2>
+                <h3>{{names.previous_position}}</h3>
+                <h2>Education:</h2>
+                <h3>{{names.education}}</h3>
+
+            </th>
+
+
+        </tr>
+    </table>
+</body>
